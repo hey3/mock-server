@@ -1,0 +1,25 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier . --check --ignore-unknown",
+    "format:fix": "prettier . --write --ignore-unknown",
+    "build": "openapi-typescript ./src/swagger.json -o ./src/schema.ts",
+    "typecheck": "tsc --project tsconfig.json --pretty --noEmit --incremental false"
+  },
+  "dependencies": {
+    "@mswjs/data": "0.16.2",
+    "msw": "2.6.5",
+    "openapi-typescript": "7.4.3"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "typescript": "5.5.4"
+  }
+}
